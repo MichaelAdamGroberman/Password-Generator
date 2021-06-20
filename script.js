@@ -1,11 +1,25 @@
-// Define all characters to use in the generated password
-var pwdChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#$%&'()*+,-./:;<=>?@^_`{|}~";
+// Define Variables 
+var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberChar = "0123456789";
+var specialChar = "!@#$%^&*()_-+={}[];:'`~<,>.?/|";
+var passwordLength;
+var containsUppercaseChar;
+var containsLowercaseChar;
+var containsSpecialChar;
+var containsNumberChar;
 
-// Define number of characters in the generated password
-var pwdLength = 10;
-
-// Define the value of the generated password using a map function to loop through the available password characters, selecting a random position in the array to add to the password.
-var generatedPassword = Array(pwdLength).fill(pwdChars).map(function(x) { return x[Math.floor(Math.random() * x.length)] }).join('');
-
-// Print the generatedPassword in the console.log
-console.log(generatedPassword);
+// define function to determine password length 
+function confirmLength (){
+    passwordLength = prompt("Determine password length (between 8-128 characters): ");
+    if (passwordLength<8){
+      alert("Password length must be a number between 8-128 characters");
+      determineLength();
+    } else if (passwordLength>128){
+      alert("Password length must be a number between 8-128 characters");
+      determineLength();
+    
+    } else {
+    return passwordLength;
+ }
+} 
