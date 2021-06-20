@@ -1,2 +1,2 @@
 # Password-Generator
-complex password generator, created with js, html, and css 
+secure password generator, created with javascript, html, and css 
