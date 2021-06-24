@@ -2,16 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Objects</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
+<!-- body goes here -->
 <body>
-  
-  <h1 style="text-align:center">Open the Console to See the Magic ✨</h1>
-
-  <script src="script.js"></script>
-
+    <div id="wrapper">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <!-- content starts here-->
+        <div id="content">
+            <h2>Generate a Password</h2>
+            <hr>
+            <!-- generated password Output area -->
+            <textarea readonly id="password" placeholder="Your Secure Password"
+                aria-label="Generated Password"></textarea>
+            <hr>
+            <!-- buttons  -->
+            <div id="btn">
+                <!-- generate password button -->
+                <button id="generate">Generate
+                    Password</button>
+                <!-- copy to clipboard button -->
+                <button id="copy">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+    <!-- link to Javascript document-->
+    <script src="script.js"></script>
 </body>
+
 </html>
